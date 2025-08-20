@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Antonio Ughi</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AU</div>
+        <div><strong>Antonio Ughi</strong></div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a class="active" href="cv.html">CV</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <h1>Curriculum Vitae</h1>
+      <div class="card">
+        <p>
+          View or download my CV:
+          <a class="btn" href="assets/Antonio_Ughi_CV.pdf" download>Download PDF</a>
+        </p>
+
+        <!-- Embedded viewer -->
+        <object class="pdf-viewer" data="assets/Antonio_Ughi_CV.pdf" type="application/pdf">
+          <iframe class="pdf-viewer" src="assets/Antonio_Ughi_CV.pdf"></iframe>
+        </object>
+
+        <p class="muted small">
+          If the viewer doesn’t load, use the download button above.
+        </p>
+      </div>
+    </main>
+
+    <footer>© <span id="year"></span> Antonio Ughi</footer>
+  </div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

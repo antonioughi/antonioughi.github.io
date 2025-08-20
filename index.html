@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antonio Ughi</title>
+  <meta name="description" content="Personal website of Antonio Ughi." />
+  <meta name="theme-color" content="#0b0d10" />
+  <style>
+    :root{ --bg:#0b0d10; --bg2:#0f1419; --card:#12161b; --text:#e8edf2; --muted:#a7b6c6; --accent:#7dd3fc; --accent2:#a78bfa; --border:#203040; --max: 1040px }
+    @media (prefers-color-scheme: light){ :root{ --bg:#ffffff; --bg2:#f7fafc; --card:#ffffff; --text:#0c1116; --muted:#5b6b7b; --accent:#0ea5e9; --accent2:#7c3aed; --border:#e5eef5 } }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
+    .wrap{max-width:var(--max);margin:0 auto;padding:20px}
+    header{padding:18px 0;border-bottom:1px solid var(--border)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#0b0d10;font-weight:800}
+    .hero{display:grid;gap:20px;padding:40px 0}
+    @media(min-width:900px){ .hero{grid-template-columns:1fr 1fr;align-items:center} }
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px}
+    h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 10px}
+    p{color:var(--muted)}
+    img{max-width:100%;border-radius:12px;display:block}
+    footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:var(--muted);text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AU</div>
+        <div><strong>Antonio Ughi</strong></div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <img src="your-photo.jpg" alt="Antonio Ughi" />
+      </div>
+      <div class="card">
+        <h1>Welcome</h1>
+        <p>Short description goes here. You can introduce yourself briefly and later expand with more sections.</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Antonio Ughi
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

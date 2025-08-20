@@ -1,144 +1,63 @@
-/* === FILE: style.css === */
-:root{ --bg:#0b0d10; --bg2:#0f1419; --card:#12161b; --text:#e8edf2; --muted:#a7b6c6; --accent:#7dd3fc; --accent2:#a78bfa; --border:#203040; --max: 1040px }
-@media (prefers-color-scheme: light){ :root{ --bg:#ffffff; --bg2:#f7fafc; --card:#ffffff; --text:#0c1116; --muted:#5b6b7b; --accent:#0ea5e9; --accent2:#7c3aed; --border:#e5eef5 } }
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.wrap{max-width:var(--max);margin:0 auto;padding:20px}
-header{position:sticky;top:0;background:rgba(11,13,16,.6);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid var(--border);z-index:5}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#0b0d10;font-weight:800}
-nav{display:flex;gap:14px;flex-wrap:wrap}
-nav a{padding:8px 10px;border-radius:10px}
-nav a:hover{background:var(--bg2)}
-.hero{display:grid;gap:20px;padding:40px 0}
-@media(min-width:900px){ .hero{grid-template-columns:1fr 1fr;align-items:center} }
-.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px}
-h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 10px}
-h2{font-size:clamp(20px,3vw,26px);margin:0 0 10px}
-p{color:var(--muted)}
-img{max-width:100%;border-radius:12px;display:block}
-footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:var(--muted);text-align:center}
-.list{list-style:none;margin:0;padding:0}
-.list li{padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--bg2);margin-bottom:10px}
-.pdf-frame{width:100%;height:80vh;border:1px solid var(--border);border-radius:12px;background:var(--bg2)}
+<div class="brand">
+<div class="logo">AU</div>
+<div><strong>Antonio Ughi</strong></div>
+</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="cv.html">CV</a>
+</nav>
+</div>
+</header>
 
-/* === FILE: index.html === */
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Antonio Ughi</title>
-  <meta name="description" content="Personal website of Antonio Ughi." />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
-        <div class="logo">AU</div>
-        <div><strong>Antonio Ughi</strong></div>
-      </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="cv.html">CV</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div>
-        <img src="your-photo.jpg" alt="Antonio Ughi" />
-      </div>
-      <div class="card">
-        <h1>Welcome</h1>
-        <p>Short description here. For example: PhD student in Economics at PSE/Paris 1. Interests: automation, AI, production networks, industrial policy.</p>
-      </div>
-    </section>
-    <footer>© <span id="year"></span> Antonio Ughi</footer>
-  </main>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<main class="wrap">
+<h1>Research</h1>
+<ul class="list">
+<li><strong>Project or Paper Title</strong> — short one-line description or status. [<a href="#">abstract</a>] [<a href="#">pdf</a>]</li>
+<li><strong>Another project</strong> — optional link to draft/slides when ready.</li>
+</ul>
+<footer>© <span id="year-r"></span> Antonio Ughi</footer>
+</main>
+<script>document.getElementById('year-r').textContent=new Date().getFullYear();</script>
 </body>
 </html>
 
-<!-- === FILE: research.html === -->
+
+/* === FILE: cv.html === */
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research — Antonio Ughi</title>
-  <meta name="description" content="Research by Antonio Ughi." />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CV — Antonio Ughi</title>
+<meta name="description" content="CV of Antonio Ughi." />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
-        <div class="logo">AU</div>
-        <div><strong>Antonio Ughi</strong></div>
-      </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="cv.html">CV</a>
-      </nav>
-    </div>
-  </header>
+<header>
+<div class="wrap nav">
+<div class="brand">
+<div class="logo">AU</div>
+<div><strong>Antonio Ughi</strong></div>
+</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="cv.html">CV</a>
+</nav>
+</div>
+</header>
 
-  <main class="wrap">
-    <h1>Research</h1>
-    <ul class="list">
-      <li><strong>Project or Paper Title</strong> — short one-line description or status. [<a href="#">abstract</a>] [<a href="#">pdf</a>]</li>
-      <li><strong>Another project</strong> — optional link to draft/slides when ready.</li>
-    </ul>
-    <footer>© <span id="year-r"></span> Antonio Ughi</footer>
-  </main>
-  <script>document.getElementById('year-r').textContent=new Date().getFullYear();</script>
-</body>
-</html>
 
-<!-- === FILE: cv.html === -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV — Antonio Ughi</title>
-  <meta name="description" content="CV of Antonio Ughi." />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
-        <div class="logo">AU</div>
-        <div><strong>Antonio Ughi</strong></div>
-      </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="cv.html">CV</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <h1>Curriculum Vitae</h1>
-    <object class="pdf-frame" data="cv_AntonioUghi.pdf#view=fitH" type="application/pdf">
-      <iframe class="pdf-frame" src="cv_AntonioUghi.pdf#view=fitH"></iframe>
-    </object>
-    <p class="hint">If the PDF doesn’t show, <a href="cv_AntonioUghi.pdf" download>download the CV</a>.</p>
-    <footer>© <span id="year-c"></span> Antonio Ughi</footer>
-  </main>
-  <script>document.getElementById('year-c').textContent=new Date().getFullYear();</script>
-</body>
-</html>
-
-  </script>
+<main class="wrap">
+<h1>Curriculum Vitae</h1>
+<object class="pdf-frame" data="cv_AntonioUghi.pdf#view=fitH" type="application/pdf">
+<iframe class="pdf-frame" src="cv_AntonioUghi.pdf#view=fitH"></iframe>
+</object>
+<p class="hint">If the PDF doesn’t show, <a href="cv_AntonioUghi.pdf" download>download the CV</a>.</p>
+<footer>© <span id="year-c"></span> Antonio Ughi</footer>
+</main>
+<script>document.getElementById('year-c').textContent=new Date().getFullYear();</script>
 </body>
 </html>

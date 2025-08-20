@@ -21,4 +21,17 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 .btn{display:inline-block;margin-left:10px;padding:.5rem .75rem;border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none}
 .btn:hover{border-color:var(--accent);color:var(--accent)}
 .small{font-size:.9rem}.muted{color:var(--muted)}
+.site-title {
+  font-size: 2rem;   /* larger than before */
+  font-weight: 700;
+  color: var(--text);
+}
+
+.profile-photo {
+  max-width: 280px;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
 

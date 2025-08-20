@@ -9,18 +9,22 @@
   <style>
     :root{ --bg:#0b0d10; --bg2:#0f1419; --card:#12161b; --text:#e8edf2; --muted:#a7b6c6; --accent:#7dd3fc; --accent2:#a78bfa; --border:#203040; --max: 1040px }
     @media (prefers-color-scheme: light){ :root{ --bg:#ffffff; --bg2:#f7fafc; --card:#ffffff; --text:#0c1116; --muted:#5b6b7b; --accent:#0ea5e9; --accent2:#7c3aed; --border:#e5eef5 } }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
     .wrap{max-width:var(--max);margin:0 auto;padding:20px}
-    header{padding:18px 0;border-bottom:1px solid var(--border)}
+    header{padding:18px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
     .brand{display:flex;align-items:center;gap:12px}
     .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#0b0d10;font-weight:800}
+    nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-weight:500}
+    nav a:hover{color:var(--accent)}
     .hero{display:grid;gap:20px;padding:40px 0}
     @media(min-width:900px){ .hero{grid-template-columns:1fr 1fr;align-items:center} }
     .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px}
     h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 10px}
+    h2{margin-top:40px}
     p{color:var(--muted)}
     img{max-width:100%;border-radius:12px;display:block}
     footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:var(--muted);text-align:center}
+    .pdf-viewer{width:100%;height:700px;border:none;border-radius:12px}
   </style>
 </head>
 <body>
@@ -30,8 +34,13 @@
         <div class="logo">AU</div>
         <div><strong>Antonio Ughi</strong></div>
       </div>
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#cv">CV</a>
+      </nav>
     </header>
 
+    <!-- Welcome section -->
     <section class="hero">
       <div>
         <img src="your-photo.jpg" alt="Antonio Ughi" />
@@ -39,6 +48,23 @@
       <div class="card">
         <h1>Welcome</h1>
         <p>Short description goes here. You can introduce yourself briefly and later expand with more sections.</p>
+      </div>
+    </section>
+
+    <!-- Research section -->
+    <section id="research">
+      <h2>Research</h2>
+      <div class="card">
+        <p>Here you can add descriptions of your research interests, projects, or publications. For example: “My research focuses on industrial policy, firm dynamics, automation and AI adoption, using microdata and econometric models.”</p>
+      </div>
+    </section>
+
+    <!-- CV section -->
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <div class="card">
+        <p>You can view my CV below:</p>
+        <iframe class="pdf-viewer" src="Antonio_Ughi_CV.pdf"></iframe>
       </div>
     </section>
 
@@ -52,4 +78,5 @@
   </script>
 </body>
 </html>
+
 

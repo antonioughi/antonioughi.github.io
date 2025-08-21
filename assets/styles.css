@@ -61,7 +61,7 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 
 
 .social-links {
-  margin-top: 24px;
+  margin-top: 50px;
   display: flex;
   justify-content: center; /* centers under photo */
   gap: 18px;               /* spacing between icons */

@@ -83,11 +83,18 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 
 
 .card {
-  margin-top: 30px;  /* increase value for more distance */
-  padding: 20px;
-  border-radius: 12px;
-  background-color: #111; /* or your chosen background */
+  padding-top: 12px;   /* reduce from default (likely 20–30px) */
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
+
+/* Also shrink top margin of section headings inside cards */
+.card h2, 
+.card h3 {
+  margin-top: 0.4em;   /* default is ~1em */
+}
+
 
 
 .card ul li {

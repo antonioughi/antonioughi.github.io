@@ -134,4 +134,36 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   .mobile-header nav    { width: 100%; display: flex; justify-content: center; gap: 18px; }
 }
 
+/* Default: top mobile icons hidden on desktop */
+.social-links--top-mobile { display: none; }
+
+/* Mobile behavior */
+@media (max-width: 700px) {
+  /* Hide the large photo + the icons under it (first column) */
+  .hero.aligned > div:first-child {
+    display: none !important;
+  }
+
+  /* Show the top icons row under the header */
+  .social-links--top-mobile {
+    display: flex !important;
+    justify-content: center;
+    gap: 14px;
+    margin: 10px 0 4px;
+  }
+  .social-links--top-mobile svg {
+    fill: var(--text);           /* white in dark mode, dark in light mode */
+  }
+
+  /* Make the text span full width below the header/icons */
+  .hero.aligned {
+    display: block !important;
+    padding-top: 8px;
+  }
+  .hero.aligned .description {
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+}
 

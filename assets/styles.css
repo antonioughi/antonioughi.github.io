@@ -50,6 +50,14 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   margin: 0;
 }
 
+.description a {
+  color: var(--text);          /* same as main text */
+  text-decoration: underline;  /* keep underline for clarity */
+}
+
+.description a:hover {
+  color: var(--accent);        /* highlight with accent color on hover */
+}
 
 
 

@@ -135,4 +135,21 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   .mobile-header nav    { width:100%; display:flex; justify-content:center; gap:18px; }
 }
 
+/* Hide the big hero photo on phones, keep only the logo in header */
+@media (max-width: 700px) {
+  /* collapse the two-column hero to single column */
+  .hero.aligned { display: block !important; padding: 16px 0; }
+
+  /* hide the large photo and the icons under it */
+  .hero.aligned .profile-photo,
+  .hero.aligned .social-links { display: none !important; }
+
+  /* make the text comfortable to read */
+  .hero.aligned .description {
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .hero.aligned .description p { line-height: 1.7; }
+}
 

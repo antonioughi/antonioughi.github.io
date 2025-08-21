@@ -63,18 +63,18 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 .social-links {
   margin-top: 12px;
   display: flex;
-  gap: 14px;
-  justify-content: center; /* centers icons below the photo */
+  justify-content: center; /* centers under photo */
+  gap: 18px;               /* spacing between icons */
 }
 
-.social-links a {
-  color: var(--text); /* inherits your theme (white/dark) */
-  transition: color 0.2s ease, transform 0.2s ease;
+.social-links svg {
+  fill: var(--text);        /* makes icons the same color as your text (white in dark mode) */
+  transition: fill 0.2s ease, transform 0.2s ease;
 }
 
-.social-links a:hover {
-  color: var(--accent); /* highlight on hover */
-  transform: scale(1.1);
+.social-links a:hover svg {
+  fill: var(--accent);      /* highlight color on hover */
+  transform: scale(1.15);
 }
 
 

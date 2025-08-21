@@ -60,5 +60,21 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 }
 
 
+.social-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 14px;
+  justify-content: center; /* centers icons below the photo */
+}
+
+.social-links a {
+  color: var(--text); /* inherits your theme (white/dark) */
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent); /* highlight on hover */
+  transform: scale(1.1);
+}
 
 

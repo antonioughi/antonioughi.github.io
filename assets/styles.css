@@ -134,10 +134,10 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   .mobile-header nav    { width: 100%; display: flex; justify-content: center; gap: 18px; }
 }
 
-/* Hide the big picture block on mobile */
-@media (max-width: 700px) {
   .hero.aligned > div:first-child {
     display: none !important;
-  }
-}
+
+
+}}
+
 

@@ -79,6 +79,6 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 
 .profile-photo {
   display: block;
-  margin-bottom: 40px; /* adds clear space below the photo */
+  margin-bottom: 30px; /* adds clear space below the photo */
 }
 

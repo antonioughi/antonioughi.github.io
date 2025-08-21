@@ -112,22 +112,5 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 
 
 
-/* Default: show desktop header, hide mobile header */
-.desktop-header { display: flex; }
-.mobile-header  { display: none !important; }
-
-/* On phones: hide desktop header, show research-style mobile header
-   AND hide the big picture column */
-/* di default: mostra loghi sotto la foto, nascondi quelli "mobile-only" */
-/* Nascondi i loghi mobile di default, mostra quelli desktop */
-.desktop-only { display: flex; justify-content: center; gap: 18px; margin-top: 20px; }
-.mobile-only { display: none; }
-
-/* Su mobile: nascondi foto + loghi desktop, mostra loghi mobile */
-@media (max-width: 700px) {
-  .hero.aligned > div:first-child { display: none; }  /* nasconde la colonna con foto */
-  .desktop-only { display: none; }
-  .mobile-only { display: flex; justify-content: center; gap: 18px; margin-top: 20px; }
-}
-
+/* Default: show desktop header, hide mobile header */ .desktop-header { display: flex; } .mobile-header { display: none !important; } /* On phones: hide desktop header, show research-style mobile header AND hide the big picture column */ @media (max-width: 700px) { .desktop-header { display: none !important; } .mobile-header { display: flex !important; } /* Hide the big photo (first column in hero) on mobile */ .hero.aligned > div:first-child { display: none !important; } }
 

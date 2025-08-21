@@ -125,15 +125,6 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   /* Hide the big photo (first column in hero) on mobile */
   .hero.aligned > div:first-child { display: none !important; }
 
-   /* Ensure text spans full width */
-  .hero.aligned { grid-template-columns: 1fr; }
-
-  /* Move social links below the text and center them */
-  .description .social-links {
-    margin-top: 20px;
-    justify-content: center;
-
- }
     
 }
 

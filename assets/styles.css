@@ -120,20 +120,25 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 
 
 /* Hide the big hero photo on phones, keep only the logo in header */
+/* Mobile: show only the text under the header */
 @media (max-width: 700px) {
-  /* collapse the two-column hero to single column */
-  .hero.aligned { display: block !important; padding: 16px 0; }
+  .hero.aligned { 
+    display: block !important; 
+    padding: 16px 0; 
+    margin-top: 0;
+  }
 
-  /* hide the large photo and the icons under it */
-  .hero.aligned .profile-photo,
-  .hero.aligned .social-links { display: none !important; }
+  /* Hide the photo (and any icons) column */
+  .hero.aligned > div:first-child {
+    display: none !important;
+  }
 
-  /* make the text comfortable to read */
+  /* Nice readable text width */
   .hero.aligned .description {
     max-width: 65ch;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 12px;
   }
-  .hero.aligned .description p { line-height: 1.7; }
 }
+
 

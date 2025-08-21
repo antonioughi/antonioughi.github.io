@@ -86,4 +86,7 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   padding: 15px 20px; /* smaller box than before */
 }
 
+.card ul li {
+  margin-bottom: 10px; /* adjust this value for more or less spacing */
+}
 

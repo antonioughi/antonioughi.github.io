@@ -83,10 +83,14 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 
 
 .card {
-  padding: 15px 20px; /* smaller box than before */
+  margin-top: 30px;  /* increase value for more distance */
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #111; /* or your chosen background */
 }
 
+
 .card ul li {
-  margin-bottom: 10px; /* adjust this value for more or less spacing */
+  margin-bottom: 30px; /* adjust this value for more or less spacing */
 }
 

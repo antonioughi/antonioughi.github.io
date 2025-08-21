@@ -81,3 +81,9 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   margin-bottom: 30px; /* adds clear space below the photo */
 }
 
+
+.card {
+  padding: 15px 20px; /* smaller box than before */
+}
+
+

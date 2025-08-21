@@ -122,14 +122,7 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   .desktop-header { display: none !important; }
   .mobile-header  { display: flex !important; }
 
-  .mobile-header {
-    flex-wrap: wrap;
-    gap: 10px;
-    border-bottom: 1px solid var(--border);
-    padding: 18px 0;
-    align-items: center;
-    justify-content: space-between;
-  }
+
   .mobile-header .brand { display: flex; align-items: center; gap: 12px; }
   .mobile-header .logo  { width: 40px; height: 40px; overflow: hidden; border-radius: 12px; display: grid; place-items: center; }
   .mobile-header nav    { width: 100%; display: flex; justify-content: center; gap: 18px; }

@@ -101,49 +101,11 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   margin-bottom: 30px; /* adjust this value for more or less spacing */
 }
 
-
-/* ---------- Mobile adjustments (<= 700px) ---------- */
-@media (max-width: 700px) {
-  .wrap { padding: 16px; }
-
-  /* Header: stack brand + nav and center them */
-  header { flex-wrap: wrap; gap: 10px; }
-  .brand { width: 100%; justify-content: center; }
-  nav   { width: 100%; display: flex; justify-content: center; gap: 18px; }
-
-  /* Hero: stack photo above text */
-  .hero.aligned {
-    display: grid;
-    grid-template-columns: 1fr;     /* single column */
-    gap: 16px;
-    padding: 24px 0;
-    text-align: center;
-  }
-
-  /* Photo: smaller and centered */
-  .profile-photo {
-    max-width: 160px;               /* was ~280px on desktop */
-    width: 60vw;                     /* responsive */
-    margin: 0 auto;                  /* center */
-    border-radius: 14px;
-  }
-
-  /* Social icons under the photo */
-  .social-links { margin-top: 10px; gap: 14px; }
-  .social-links svg { width: 24px; height: 24px; }
-
-  /* Paragraphs: comfortable line length & spacing */
-  .description { max-width: 60ch; margin: 0 auto; }
-  .description p { line-height: 1.7; margin-bottom: 1rem; }
-
-  /* Card (if used on index later): tighter padding */
-  .card { padding: 14px; }
+.card a {
+  color: white;
+  text-decoration: underline;  /* keep underline if you want it clear it's clickable */
 }
 
-/* ---------- Very small screens (<= 360px) ---------- */
-@media (max-width: 360px) {
-  nav { gap: 12px; font-size: 0.95rem; }
-  .profile-photo { max-width: 130px; }
+.card a:hover {
+  color: #cccccc; /* optional: a softer grey when hovering */
 }
-
-

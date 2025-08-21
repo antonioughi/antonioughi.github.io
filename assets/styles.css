@@ -59,6 +59,16 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
   color: var(--accent);        /* highlight with accent color on hover */
 }
 
+/* Space between paragraphs in the intro */
+.description p {
+  margin: 0 0 1rem;   /* 16px bottom spacing */
+}
+.description p:last-child {
+  margin-bottom: 0;   /* no extra gap after the last one */
+}
+
+/* (optional) improve readability */
+.description { max-width: 62ch; }
 
 
 

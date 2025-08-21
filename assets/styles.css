@@ -112,33 +112,26 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 
 
 
-/* Show desktop header by default, hide mobile */
+/* Default: show desktop header, hide mobile header */
 .desktop-header { display: flex; }
 .mobile-header  { display: none !important; }
 
-/* On phones: hide desktop, show mobile */
-
-
-/* Hide the big hero photo on phones, keep only the logo in header */
-/* Mobile: show only the text under the header */
+/* On phones: hide desktop header, show research-style mobile header */
 @media (max-width: 700px) {
-  .hero.aligned { 
-    display: block !important; 
-    padding: 16px 0; 
-    margin-top: 0;
-  }
+  .desktop-header { display: none !important; }
+  .mobile-header  { display: flex !important; }
 
-  /* Hide the photo (and any icons) column */
-  .hero.aligned > div:first-child {
-    display: none !important;
+  .mobile-header {
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+    align-items: center;
+    justify-content: space-between;
   }
-
-  /* Nice readable text width */
-  .hero.aligned .description {
-    max-width: 65ch;
-    margin: 0 auto;
-    padding: 0 12px;
-  }
+  .mobile-header .brand { display: flex; align-items: center; gap: 12px; }
+  .mobile-header .logo  { width: 40px; height: 40px; overflow: hidden; border-radius: 12px; display: grid; place-items: center; }
+  .mobile-header nav    { width: 100%; display: flex; justify-content: center; gap: 18px; }
 }
 
 

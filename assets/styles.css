@@ -119,13 +119,15 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 /* On phones: hide desktop header, show research-style mobile header
    AND hide the big picture column */
 /* di default: mostra loghi sotto la foto, nascondi quelli "mobile-only" */
-.photo-col .social-links { display: flex; justify-content: center; margin-top: 20px; }
-.description .mobile-only { display: none; }
+/* Nascondi i loghi mobile di default, mostra quelli desktop */
+.desktop-only { display: flex; justify-content: center; gap: 18px; margin-top: 20px; }
+.mobile-only { display: none; }
 
-/* su mobile: nascondi colonna foto (con loghi) e mostra loghi sotto testo */
+/* Su mobile: nascondi foto + loghi desktop, mostra loghi mobile */
 @media (max-width: 700px) {
-  .hero.aligned > .photo-col { display: none; }
-  .description .mobile-only { display: flex; justify-content: center; gap: 18px; margin-top: 20px; }
+  .hero.aligned > div:first-child { display: none; }  /* nasconde la colonna con foto */
+  .desktop-only { display: none; }
+  .mobile-only { display: flex; justify-content: center; gap: 18px; margin-top: 20px; }
 }
 
 

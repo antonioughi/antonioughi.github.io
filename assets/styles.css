@@ -111,16 +111,17 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
 }
 
 
-/* Show desktop header by default, hide mobile header */
+
+/* Show desktop header by default, hide mobile */
 .desktop-header { display: flex; }
-.mobile-header  { display: none; }
+.mobile-header  { display: none !important; }
 
-/* Mobile: swap to research-style header */
+/* On phones: hide desktop, show mobile */
 @media (max-width: 700px) {
-  .desktop-header { display: none; }
-  .mobile-header  { display: flex; }
+  .desktop-header { display: none !important; }
+  .mobile-header  { display: flex !important; }
 
-  /* optional: neat stacking on small screens */
+  /* optional tidy styling */
   .mobile-header {
     flex-wrap: wrap;
     gap: 10px;
@@ -130,14 +131,8 @@ footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:v
     justify-content: space-between;
   }
   .mobile-header .brand { display:flex; align-items:center; gap:12px; }
-  .mobile-header .logo {
-    width:40px; height:40px; border-radius:12px; overflow:hidden;
-    display:grid; place-items:center;
-  }
-  .mobile-header nav {
-    width:100%;
-    display:flex; justify-content:center; gap:18px;
-  }
+  .mobile-header .logo  { width:40px; height:40px; border-radius:12px; overflow:hidden; display:grid; place-items:center; }
+  .mobile-header nav    { width:100%; display:flex; justify-content:center; gap:18px; }
 }
 
 

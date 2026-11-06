@@ -1,0 +1,208 @@
+/* Shared palette: dark by default, light only when selected. */
+:root {
+  color-scheme: dark;
+  --bg: #0b0d10;
+  --bg2: #0f1419;
+  --card: #12161b;
+  --text: #e8edf2;
+  --muted: #a7b6c6;
+  --accent: #7dd3fc;
+  --accent2: #a78bfa;
+  --border: #203040;
+  --card-link: #e8edf2;
+  --card-link-hover: #a7b6c6;
+  --max: 1040px;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #fafafa;
+  --bg2: #f1f5f9;
+  --card: #ffffff;
+  --text: #232c36;
+  --muted: #556371;
+  --accent: #17639b;
+  --accent2: #6d4fb3;
+  --border: #dce3e9;
+  --card-link: #17639b;
+  --card-link-hover: #0f4772;
+}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+.wrap{max-width:var(--max);margin:0 auto;padding:20px}
+header{padding:18px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#0b0d10;font-weight:800}
+nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--accent)}
+nav a.active{color:var(--accent)}
+.hero{display:grid;gap:20px;padding:40px 0}
+@media(min-width:900px){.hero{grid-template-columns:1fr 1fr;align-items:center}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 10px}
+h2{margin-top:40px}
+p{color:var(--muted)}
+img{max-width:100%;border-radius:12px;display:block}
+footer{border-top:1px solid var(--border);margin-top:28px;padding:22px 0;color:var(--muted);text-align:center}
+.page{padding:32px 0}
+.pdf-viewer{width:100%;height:780px;border:none;border-radius:12px;background:var(--bg2)}
+.btn{display:inline-block;margin-left:10px;padding:.5rem .75rem;border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.small{font-size:.9rem}.muted{color:var(--muted)}
+
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hero.aligned {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+.profile-photo {
+  max-width: 260px;
+  border-radius: 16px;
+  display: block;
+}
+
+.description p {
+  color: var(--text);   /* plain white (in dark mode) */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.description a {
+  color: var(--text);          /* same as main text */
+  text-decoration: underline;  /* keep underline for clarity */
+}
+
+.description a:hover {
+  color: var(--accent);        /* highlight with accent color on hover */
+}
+
+
+.social-links {
+  display: flex;
+  justify-content: center; /* centers under photo */
+  gap: 18px;               /* spacing between icons */
+}
+
+.social-links svg {
+  fill: var(--text);        /* makes icons the same color as your text (white in dark mode) */
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover svg {
+  fill: var(--accent);      /* highlight color on hover */
+  transform: scale(1.15);
+}
+
+.profile-photo {
+  display: block;
+  margin-bottom: 30px; /* adds clear space below the photo */
+}
+
+
+.card {
+  padding-top: 12px;   /* reduce from default (likely 20–30px) */
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+/* Also shrink top margin of section headings inside cards */
+.card h2, 
+.card h3 {
+  margin-top: 0.4em;   /* default is ~1em */
+}
+
+
+
+.card ul li {
+  margin-bottom: 30px; /* adjust this value for more or less spacing */
+}
+
+.card a {
+  color: var(--card-link);
+  text-decoration: underline;  /* keep underline if you want it clear it's clickable */
+}
+
+.card a:hover {
+  color: var(--card-link-hover);
+}
+
+
+
+/* Default: show desktop header, hide mobile header */ .desktop-header { display: flex; } .mobile-header { display: none !important; } /* On phones: hide desktop header, show research-style mobile header AND hide the big picture column */ @media (max-width: 700px) { .desktop-header { display: none !important; } .mobile-header { display: flex !important; } /* Hide the big photo (first column in hero) on mobile */ .hero.aligned > div:first-child { display: none !important; } }
+
+
+
+/* Theme switch: lightbulb in dark mode, moon in light mode. */
+nav {
+  display: flex;
+  align-items: center;
+}
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-left: 16px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color .2s, border-color .2s, color .2s;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--bg2);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.theme-icon-moon { display: none; }
+:root[data-theme="light"] .theme-icon-bulb { display: none; }
+:root[data-theme="light"] .theme-icon-moon { display: block; }
+
+/* The dark AU monogram has white letters; invert it on light pages. */
+.logo img { transition: filter .2s ease; }
+:root[data-theme="light"] .logo img { filter: invert(1); }
+
+/* Keep an intentional gap after 'Ciao!' despite .description p margin resets. */
+.description p.intro-greeting { margin-bottom: 28px; }
+
+/* Mobile nav remains usable, including the new theme button. */
+@media (max-width: 700px) {
+  header { gap: 8px; }
+  header .brand { gap: 8px; }
+  nav { gap: 10px; }
+  nav a { margin-left: 0; font-size: .9rem; }
+  .theme-toggle { width: 36px; height: 36px; margin-left: 2px; flex-shrink: 0; }
+}
+@media (max-width: 400px) {
+  .wrap { padding: 16px; }
+  .logo { width: 34px; height: 34px; }
+  header .brand strong { font-size: .9rem; }
+  nav { gap: 8px; }
+  .theme-toggle { width: 32px; height: 32px; }
+}

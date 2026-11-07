@@ -45,13 +45,12 @@
     .theme-toggle:hover { border-color:var(--accent); color:var(--accent); }
     .theme-toggle:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
     .theme-emoji { display:inline-block; font-size:19px; line-height:1; font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif; }
-    .theme-label { font-size:0.83rem; }
+    .theme-label { display:none; }
     @media(max-width:700px) {
       header { gap:8px; }
       nav { gap:8px; }
       nav a { margin-left:0; font-size:.87rem; }
       .theme-toggle { margin-left:2px; width:36px; height:36px; padding:0; flex-shrink:0; }
-      .theme-label { display:none; }
     }
     @media(max-width:400px) {
       .wrap { padding:16px; }

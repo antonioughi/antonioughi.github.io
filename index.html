@@ -7,9 +7,63 @@
   <title>Antonio Ughi</title>
   <meta name="description" content="Personal website of Antonio Ughi." />
   <meta name="theme-color" content="#0b0d10" />
-
-  <script src="assets/theme.js"></script>
   <link rel="stylesheet" href="assets/styles.css" />
+  <!-- Set the saved theme before CSS paints, even when external JS is unavailable. -->
+  <script>
+    (function () {
+      var theme = "dark";
+      try { theme = localStorage.getItem("website-theme") || "dark"; } catch (e) {}
+      document.documentElement.setAttribute("data-theme", theme === "light" ? "light" : "dark");
+    })();
+  </script>
+  <!-- Theme essentials duplicated here so HTML-only updates still work with the old stylesheet. -->
+  <style>
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --bg:#0b0d10; --bg2:#0f1419; --card:#12161b; --text:#e8edf2;
+      --muted:#a7b6c6; --accent:#7dd3fc; --accent2:#a78bfa; --border:#203040;
+      --card-link:#e8edf2; --card-link-hover:#a7b6c6;
+    }
+    html[data-theme="light"] {
+      color-scheme: light;
+      --bg:#fafafa; --bg2:#f1f5f9; --card:#ffffff; --text:#232c36;
+      --muted:#556371; --accent:#17639b; --accent2:#6d4fb3; --border:#dce3e9;
+      --card-link:#17639b; --card-link-hover:#0f4772;
+    }
+    html[data-theme="light"] .card a { color:var(--card-link); }
+    html[data-theme="light"] .card a:hover { color:var(--card-link-hover); }
+    html[data-theme="light"] .logo img { filter:invert(1); }
+    .description p.intro-greeting { margin-bottom:28px; }
+    nav { display:flex; align-items:center; }
+    .theme-toggle {
+      display:inline-flex; align-items:center; justify-content:center; gap:6px;
+      margin-left:16px; padding:5px 10px; min-height:36px;
+      border:1px solid var(--border); border-radius:20px;
+      background:var(--card); color:var(--text); font:inherit; font-size:0.85rem;
+      line-height:1; cursor:pointer; white-space:nowrap;
+    }
+    .theme-toggle:hover { border-color:var(--accent); color:var(--accent); }
+    .theme-toggle:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    .theme-emoji { display:inline-block; font-size:19px; line-height:1; font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif; }
+    .theme-label { font-size:0.83rem; }
+    @media(max-width:700px) {
+      header { gap:8px; }
+      nav { gap:8px; }
+      nav a { margin-left:0; font-size:.87rem; }
+      .theme-toggle { margin-left:2px; width:36px; height:36px; padding:0; flex-shrink:0; }
+      .theme-label { display:none; }
+    }
+    @media(max-width:400px) {
+      .wrap { padding:16px; }
+      header .brand { gap:7px; }
+      .logo { width:34px; height:34px; }
+      header .brand strong { font-size:.85rem; }
+      nav { gap:6px; }
+      nav a { font-size:.82rem; }
+      .theme-toggle { width:32px; height:32px; }
+    }
+  </style>
+
   <link rel="icon" type="image/png" href="favicon.png" />
 
 </head>
@@ -26,16 +80,9 @@
       <nav>
         <a href="research.html">Research</a>
 
-        <button type="button" class="theme-toggle" aria-label="Switch to light mode" title="Switch to light mode">
-          <!-- A bulb switches on the light theme -->
-          <svg class="theme-icon theme-icon-bulb" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9 18h6M10 22h4M9 15.5c-1.85-1.1-3-2.8-3-5a6 6 0 0 1 12 0c0 2.2-1.15 3.9-3 5-.7.45-1 1.3-1 2.5h-4c0-1.2-.3-2.05-1-2.5Z"/>
-            <path d="M12 1v2M4.2 4.2l1.4 1.4M19.8 4.2l-1.4 1.4M2 11h2M20 11h2"/>
-          </svg>
-          <!-- A moon switches back to the dark theme -->
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.5 14.6A8.7 8.7 0 0 1 9.4 3.5 8.8 8.8 0 1 0 20.5 14.6Z"/>
-          </svg>
+        <button type="button" class="theme-toggle" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
+          <span class="theme-emoji" aria-hidden="true">💡</span>
+          <span class="theme-label" aria-hidden="true">Light</span>
         </button>
       </nav>
     </header>
@@ -56,16 +103,9 @@
       <nav>
         <a href="research.html">Research</a>
 
-        <button type="button" class="theme-toggle" aria-label="Switch to light mode" title="Switch to light mode">
-          <!-- A bulb switches on the light theme -->
-          <svg class="theme-icon theme-icon-bulb" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9 18h6M10 22h4M9 15.5c-1.85-1.1-3-2.8-3-5a6 6 0 0 1 12 0c0 2.2-1.15 3.9-3 5-.7.45-1 1.3-1 2.5h-4c0-1.2-.3-2.05-1-2.5Z"/>
-            <path d="M12 1v2M4.2 4.2l1.4 1.4M19.8 4.2l-1.4 1.4M2 11h2M20 11h2"/>
-          </svg>
-          <!-- A moon switches back to the dark theme -->
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.5 14.6A8.7 8.7 0 0 1 9.4 3.5 8.8 8.8 0 1 0 20.5 14.6Z"/>
-          </svg>
+        <button type="button" class="theme-toggle" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="false">
+          <span class="theme-emoji" aria-hidden="true">💡</span>
+          <span class="theme-label" aria-hidden="true">Light</span>
         </button>
       </nav>
     </header>
@@ -247,5 +287,39 @@
   </div>
 
 
+  <!-- Self-contained toggle: no separate JavaScript file is required. -->
+  <script>
+    (function () {
+      "use strict";
+      var root = document.documentElement;
+      var buttons = document.querySelectorAll(".theme-toggle");
+      var storageKey = "website-theme";
+
+      function applyTheme(theme) {
+        var light = theme === "light";
+        root.setAttribute("data-theme", light ? "light" : "dark");
+        buttons.forEach(function (button) {
+          button.querySelector(".theme-emoji").textContent = light ? "🌙" : "💡";
+          button.querySelector(".theme-label").textContent = light ? "Dark" : "Light";
+          button.setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
+          button.setAttribute("title", light ? "Switch to dark mode" : "Switch to light mode");
+          button.setAttribute("aria-pressed", String(light));
+        });
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute("content", light ? "#fafafa" : "#0b0d10");
+      }
+
+      applyTheme(root.getAttribute("data-theme"));
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+          applyTheme(next);
+          try { localStorage.setItem(storageKey, next); } catch (e) {}
+        });
+      });
+      var year = document.getElementById("year");
+      if (year) year.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>

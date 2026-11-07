@@ -190,3 +190,14 @@ nav { display:flex; align-items:center; }
 .social-links a:hover, .social-links a:focus-visible { color:var(--accent); }
 .social-links a:hover svg, .social-links a:focus-visible svg { fill:currentColor; }
 .social-links a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:4px; }
+
+/* AU header portrait: keep exact same image/color in light and dark modes. */
+.logo,
+.logo img,
+html[data-theme="light"] .logo,
+html[data-theme="light"] .logo img {
+  filter:none !important;
+  -webkit-filter:none !important;
+  opacity:1 !important;
+  mix-blend-mode:normal !important;
+}
